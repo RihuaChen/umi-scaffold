@@ -38,6 +38,7 @@
   },
   "lint-staged": {
     "**/*.less": "stylelint --syntax less",
+    "**/*.{js,jsx,ts,tsx}": "npm run lint-staged:js",
     "**/*.{js,jsx,tsx,ts,less,md,json}": [
       "prettier --write"
     ]
@@ -51,7 +52,7 @@
   "devDependencies": {
     "@umijs/fabric": "^2.1.0",
     "@umijs/preset-react": "1.x",
-    "eslint": "^6.8.0",
+    "eslint": "^7.2.0",
     "husky": "^4.0.7",
     "lint-staged": "^10.0.7",
     "prettier": "^2.0.1",
