@@ -3,7 +3,7 @@ import { defineConfig, utils } from 'umi';
 import defaultSettings from './defaultSettings';
 import proxy from './proxy';
 import webpackPlugin from './plugin.config';
-const { winPath } = utils; // preview.pro.ant.design only do not use in your production ;
+const { winPath } = utils;
 
 const { REACT_APP_ENV, GA_KEY } = process.env;
 export default defineConfig({
@@ -41,30 +41,13 @@ export default defineConfig({
   },
   cssLoader: {
     modules: {
-      getLocalIdent: (
-        context: { resourcePath: string },
-        _: string,
-        localName: string,
-      ) => {
+      getLocalIdent: (context: { resourcePath: string }, _: string, localName: string) => {
         if (
           context.resourcePath.includes('node_modules') ||
-          context.resourcePath.includes('ant.design.pro.less') ||
           context.resourcePath.includes('global.less')
         ) {
           return localName;
         }
-
-        const match = context.resourcePath.match(/src(.*)/);
-
-        if (match && match[1]) {
-          const antdProPath = match[1].replace('.less', '');
-          const arr = winPath(antdProPath)
-            .split('/')
-            .map((a: string) => a.replace(/([A-Z])/g, '-$1'))
-            .map((a: string) => a.toLowerCase());
-          return `antd-pro${arr.join('-')}-${localName}`.replace(/--/g, '-');
-        }
-
         return localName;
       },
     },
