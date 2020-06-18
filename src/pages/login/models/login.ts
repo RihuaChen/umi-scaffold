@@ -38,6 +38,7 @@ const Model: ModelType = {
 
   reducers: {
     changeLoginStatus(state) {
+      // immer 写法
       state.status = 'ok';
     },
   },

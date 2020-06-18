@@ -16,14 +16,16 @@ $ yarn start
 
 ## Skill Set
 
-- [x] React hooks
+- [x] react hooks
 - [x] umi-request/useRequest
-- [x] Dva.js
-- [x] Immer
-- [x] Mock
+- [x] dva.js
+- [x] immer
+- [x] mock
 - [x] intl
-- [x] Service-Worker/Workbox
-- [x] Config
-- [x] Eslint
-- [x] Prettier
-- [x] Stylelint
+- [x] service-Worker/Workbox
+- [x] config folder instead of umirc.ts
+- [x] eslint
+- [x] prettier
+- [x] stylelint
+- [x] husky
+- [x] link-stage
