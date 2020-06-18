@@ -1,9 +1,8 @@
 // https://umijs.org/config/
-import { defineConfig, utils } from 'umi';
+import { defineConfig } from 'umi';
 import defaultSettings from './defaultSettings';
 import proxy from './proxy';
 import webpackPlugin from './plugin.config';
-const { winPath } = utils;
 
 const { REACT_APP_ENV, GA_KEY } = process.env;
 export default defineConfig({
