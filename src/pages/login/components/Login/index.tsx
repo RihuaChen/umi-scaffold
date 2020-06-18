@@ -16,7 +16,6 @@ const Login: React.FC = () => {
   const { status } = useSelector((state: StateType) => state.login);
   const loadingEffect = useSelector((state: StateType) => state.loading);
   const loading = loadingEffect.effects['login/login'];
-  console.log('user', loading);
   useEffect(() => {
     dispatch({
       type: 'login/login',
