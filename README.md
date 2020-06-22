@@ -4,6 +4,13 @@
 
 Install dependencies,
 
+- install nvs first
+- node > 10.13.0
+
+```bash
+$ npm i yarn -g
+```
+
 ```bash
 $ yarn
 ```
@@ -21,11 +28,13 @@ $ yarn start
 - [x] dva.js
 - [x] immer
 - [x] mock
-- [x] intl
-- [x] service-Worker/Workbox
+- [x] react-intl
 - [x] config folder instead of umirc.ts
+- [x] less
+- [x] cssModule
 - [x] eslint
 - [x] prettier
 - [x] stylelint
 - [x] husky
 - [x] link-stage
+- [ ] service-worker/workbox

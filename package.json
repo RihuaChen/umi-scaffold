@@ -52,6 +52,7 @@
   "devDependencies": {
     "@umijs/fabric": "^2.1.0",
     "@umijs/preset-react": "1.x",
+    "cross-env": "^7.0.0",
     "eslint": "^7.2.0",
     "husky": "^4.0.7",
     "lint-staged": "^10.0.7",
